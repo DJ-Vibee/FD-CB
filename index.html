@@ -2,6 +2,43 @@
 <head><title>Freshbots Script Hosting</title></head>
 <body>
     <h1>Freshbots Script Hosting</h1>
-    <p>If you see this page, GitHub Pages is working.</p>
+    <p>Testing FD Chatbot.</p>
+    <script>
+(function (d, w, c) {
+    if (!d.getElementById("spd-busns-spt")) {
+        var n = d.getElementsByTagName('script')[0],
+            s = d.createElement('script');
+        var loaded = false;
+        s.id = "spd-busns-spt";
+        s.async = "async";
+        s.setAttribute("data-self-init", "false");
+        s.setAttribute("data-init-type", "opt");
+        s.src = 'https://dj-vibee.github.io/FD-CB/freshbots.min.js'; // Updated URL
+        s.setAttribute("data-client", "a0a6605a631212c85308cbb8f45b09165be3b094");
+        s.setAttribute("data-bot-hash", "2f779f1ad9568daf5b543fda1b2f5e9e5969f852");
+        s.setAttribute("data-env", "prod");
+        s.setAttribute("data-region", "us");
+        if (c) {
+            s.onreadystatechange = s.onload = function () {
+                if (!loaded) {
+                    c();
+                }
+                loaded = true;
+            };
+        }
+        n.parentNode.insertBefore(s, n);
+    }
+}) (document, window, function () {
+    Freshbots.initiateWidget({
+        autoInitChat: false,
+        getClientParams: function () {
+            return {"cstmr::eml": "", "cstmr::phn": "", "cstmr::nm": ""};
+        }
+    }, function (successResponse) {
+    }, function (errorResponse) {
+    });
+});
+</script>
+
 </body>
 </html>
